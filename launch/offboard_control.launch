@@ -1,0 +1,4 @@
+<launch>
+<include file="$(env HOME)/GPS-Waypoint-Mission-Planning/src/offboard_control/launch/mavros_posix_sitl.launch"></include>
+<node pkg="offboard_control" name="offboard_control" type="offboard_control" required="true" output="screen"/>
+</launch>

@@ -1,0 +1,1630 @@
+Error: Non-unique names detected in type plugin in
+<model name='robotx_navigation_challenge'>
+  <frame name='gate_start_red::__model__' attached_to='gate_start_red::link'>
+    <pose relative_to='__model__'>0 5 0 0 -0 0</pose>
+  </frame>
+  <link name='gate_start_red::link'>
+    <inertial>
+      <pose>0 0 -2 0 -0 0</pose>
+      <mass>25</mass>
+      <inertia>
+        <ixx>1</ixx>
+        <ixy>0</ixy>
+        <ixz>0</ixz>
+        <iyy>1</iyy>
+        <iyz>0</iyz>
+        <izz>0.1</izz>
+      </inertia>
+    </inertial>
+    <collision name='collision_inner'>
+      <pose>0 0 -0.01 0 -0 0</pose>
+      <geometry>
+        <cylinder>
+          <radius>0.15</radius>
+          <length>1.26</length>
+        </cylinder>
+      </geometry>
+    </collision>
+    <collision name='collision_outer'>
+      <pose>0 0 -0.48 0 -0 0</pose>
+      <geometry>
+        <cylinder>
+          <radius>0.24</radius>
+          <length>0.15</length>
+        </cylinder>
+      </geometry>
+    </collision>
+    <visual name='visual'>
+      <geometry>
+        <mesh>
+          <uri>model://surmark950410/mesh/surmark950410.dae</uri>
+        </mesh>
+      </geometry>
+      <material>
+        <script>
+          <uri>model://surmark950410/materials/scripts/surmark950410.material</uri>
+          <name>surmark950410/Red</name>
+        </script>
+      </material>
+    </visual>
+    <pose relative_to='gate_start_red::__model__'>0 0 0 0 -0 0</pose>
+  </link>
+  <plugin name='BuoyancyPlugin' filename='libbuoyancy_gazebo_plugin.so'>
+    <wave_model>ocean_waves</wave_model>
+    <fluid_density>1000</fluid_density>
+    <fluid_level>0.0</fluid_level>
+    <linear_drag>25.0</linear_drag>
+    <angular_drag>2.0</angular_drag>
+    <buoyancy name='buoyancy_sphere'>
+      <link_name>gate_start_red::link</link_name>
+      <pose>0 0 -0.48 0 0 0</pose>
+      <geometry>
+        <sphere>
+          <radius>0.23</radius>
+        </sphere>
+      </geometry>
+    </buoyancy>
+  </plugin>
+  <frame name='gate_start_green::__model__' attached_to='gate_start_green::link'>
+    <pose relative_to='__model__'>0 -5 0 0 -0 0</pose>
+  </frame>
+  <link name='gate_start_green::link'>
+    <inertial>
+      <pose>0 0 -2 0 -0 0</pose>
+      <mass>25</mass>
+      <inertia>
+        <ixx>1</ixx>
+        <ixy>0</ixy>
+        <ixz>0</ixz>
+        <iyy>1</iyy>
+        <iyz>0</iyz>
+        <izz>0.1</izz>
+      </inertia>
+    </inertial>
+    <collision name='collision_inner'>
+      <pose>0 0 -0.02 0 -0 0</pose>
+      <geometry>
+        <cylinder>
+          <radius>0.15</radius>
+          <length>1.18</length>
+        </cylinder>
+      </geometry>
+    </collision>
+    <collision name='collision_outer'>
+      <pose>0 0 -0.31 0 -0 0</pose>
+      <geometry>
+        <cylinder>
+          <radius>0.24</radius>
+          <length>0.2</length>
+        </cylinder>
+      </geometry>
+    </collision>
+    <visual name='visual'>
+      <geometry>
+        <mesh>
+          <uri>model://surmark950400/mesh/surmark950400.dae</uri>
+        </mesh>
+      </geometry>
+      <material>
+        <script>
+          <uri>model://surmark950400/materials/scripts/surmark950400.material</uri>
+          <name>surmark950400/Green</name>
+        </script>
+      </material>
+    </visual>
+    <pose relative_to='gate_start_green::__model__'>0 0 0 0 -0 0</pose>
+  </link>
+  <plugin name='BuoyancyPlugin' filename='libbuoyancy_gazebo_plugin.so'>
+    <wave_model>ocean_waves</wave_model>
+    <fluid_density>1000</fluid_density>
+    <fluid_level>0.0</fluid_level>
+    <linear_drag>25.0</linear_drag>
+    <angular_drag>2.0</angular_drag>
+    <buoyancy name='buoyancy_sphere'>
+      <link_name>gate_start_green::link</link_name>
+      <pose>0 0 -0.31 0 0 0</pose>
+      <geometry>
+        <sphere>
+          <radius>0.23</radius>
+        </sphere>
+      </geometry>
+    </buoyancy>
+  </plugin>
+  <frame name='gate_end_red::__model__' attached_to='gate_end_red::link'>
+    <pose relative_to='__model__'>30 5 0 0 -0 0</pose>
+  </frame>
+  <link name='gate_end_red::link'>
+    <inertial>
+      <pose>0 0 -2 0 -0 0</pose>
+      <mass>25</mass>
+      <inertia>
+        <ixx>1</ixx>
+        <ixy>0</ixy>
+        <ixz>0</ixz>
+        <iyy>1</iyy>
+        <iyz>0</iyz>
+        <izz>0.1</izz>
+      </inertia>
+    </inertial>
+    <collision name='collision_inner'>
+      <pose>0 0 -0.01 0 -0 0</pose>
+      <geometry>
+        <cylinder>
+          <radius>0.15</radius>
+          <length>1.26</length>
+        </cylinder>
+      </geometry>
+    </collision>
+    <collision name='collision_outer'>
+      <pose>0 0 -0.48 0 -0 0</pose>
+      <geometry>
+        <cylinder>
+          <radius>0.24</radius>
+          <length>0.15</length>
+        </cylinder>
+      </geometry>
+    </collision>
+    <visual name='visual'>
+      <geometry>
+        <mesh>
+          <uri>model://surmark950410/mesh/surmark950410.dae</uri>
+        </mesh>
+      </geometry>
+      <material>
+        <script>
+          <uri>model://surmark950410/materials/scripts/surmark950410.material</uri>
+          <name>surmark950410/Red</name>
+        </script>
+      </material>
+    </visual>
+    <pose relative_to='gate_end_red::__model__'>0 0 0 0 -0 0</pose>
+  </link>
+  <plugin name='BuoyancyPlugin' filename='libbuoyancy_gazebo_plugin.so'>
+    <wave_model>ocean_waves</wave_model>
+    <fluid_density>1000</fluid_density>
+    <fluid_level>0.0</fluid_level>
+    <linear_drag>25.0</linear_drag>
+    <angular_drag>2.0</angular_drag>
+    <buoyancy name='buoyancy_sphere'>
+      <link_name>gate_end_red::link</link_name>
+      <pose>0 0 -0.48 0 0 0</pose>
+      <geometry>
+        <sphere>
+          <radius>0.23</radius>
+        </sphere>
+      </geometry>
+    </buoyancy>
+  </plugin>
+  <frame name='gate_end_green::__model__' attached_to='gate_end_green::link'>
+    <pose relative_to='__model__'>30 -5 0 0 -0 0</pose>
+  </frame>
+  <link name='gate_end_green::link'>
+    <inertial>
+      <pose>0 0 -2 0 -0 0</pose>
+      <mass>25</mass>
+      <inertia>
+        <ixx>1</ixx>
+        <ixy>0</ixy>
+        <ixz>0</ixz>
+        <iyy>1</iyy>
+        <iyz>0</iyz>
+        <izz>0.1</izz>
+      </inertia>
+    </inertial>
+    <collision name='collision_inner'>
+      <pose>0 0 -0.02 0 -0 0</pose>
+      <geometry>
+        <cylinder>
+          <radius>0.15</radius>
+          <length>1.18</length>
+        </cylinder>
+      </geometry>
+    </collision>
+    <collision name='collision_outer'>
+      <pose>0 0 -0.31 0 -0 0</pose>
+      <geometry>
+        <cylinder>
+          <radius>0.24</radius>
+          <length>0.2</length>
+        </cylinder>
+      </geometry>
+    </collision>
+    <visual name='visual'>
+      <geometry>
+        <mesh>
+          <uri>model://surmark950400/mesh/surmark950400.dae</uri>
+        </mesh>
+      </geometry>
+      <material>
+        <script>
+          <uri>model://surmark950400/materials/scripts/surmark950400.material</uri>
+          <name>surmark950400/Green</name>
+        </script>
+      </material>
+    </visual>
+    <pose relative_to='gate_end_green::__model__'>0 0 0 0 -0 0</pose>
+  </link>
+  <plugin name='BuoyancyPlugin' filename='libbuoyancy_gazebo_plugin.so'>
+    <wave_model>ocean_waves</wave_model>
+    <fluid_density>1000</fluid_density>
+    <fluid_level>0.0</fluid_level>
+    <linear_drag>25.0</linear_drag>
+    <angular_drag>2.0</angular_drag>
+    <buoyancy name='buoyancy_sphere'>
+      <link_name>gate_end_green::link</link_name>
+      <pose>0 0 -0.31 0 0 0</pose>
+      <geometry>
+        <sphere>
+          <radius>0.23</radius>
+        </sphere>
+      </geometry>
+    </buoyancy>
+  </plugin>
+  <pose>58 68 2 0 -0 0.4</pose>
+</model>
+
+Error: Non-unique names detected in type plugin in
+<model name='robotx_2016_qualifying_pinger_transit'>
+  <frame name='base_gate::__model__' attached_to='base_gate::red_buoy::link'>
+    <pose relative_to='__model__'>0 0 0 0 -0 0</pose>
+  </frame>
+  <frame name='base_gate::red_buoy::__model__' attached_to='base_gate::red_buoy::link'>
+    <pose relative_to='base_gate::__model__'>0 15 0 0 -0 0</pose>
+  </frame>
+  <link name='base_gate::red_buoy::link'>
+    <inertial>
+      <pose>0 0 -2 0 -0 0</pose>
+      <mass>25</mass>
+      <inertia>
+        <ixx>1</ixx>
+        <ixy>0</ixy>
+        <ixz>0</ixz>
+        <iyy>1</iyy>
+        <iyz>0</iyz>
+        <izz>0.1</izz>
+      </inertia>
+    </inertial>
+    <collision name='collision_inner'>
+      <pose>0 0 -0.01 0 -0 0</pose>
+      <geometry>
+        <cylinder>
+          <radius>0.15</radius>
+          <length>1.26</length>
+        </cylinder>
+      </geometry>
+    </collision>
+    <collision name='collision_outer'>
+      <pose>0 0 -0.48 0 -0 0</pose>
+      <geometry>
+        <cylinder>
+          <radius>0.24</radius>
+          <length>0.15</length>
+        </cylinder>
+      </geometry>
+    </collision>
+    <visual name='visual'>
+      <geometry>
+        <mesh>
+          <uri>model://surmark950410/mesh/surmark950410.dae</uri>
+        </mesh>
+      </geometry>
+      <material>
+        <script>
+          <uri>model://surmark950410/materials/scripts/surmark950410.material</uri>
+          <name>surmark950410/Red</name>
+        </script>
+      </material>
+    </visual>
+    <pose relative_to='base_gate::red_buoy::__model__'>0 0 0 0 -0 0</pose>
+  </link>
+  <plugin name='BuoyancyPlugin' filename='libbuoyancy_gazebo_plugin.so'>
+    <wave_model>ocean_waves</wave_model>
+    <fluid_density>1000</fluid_density>
+    <fluid_level>0.0</fluid_level>
+    <linear_drag>25.0</linear_drag>
+    <angular_drag>2.0</angular_drag>
+    <buoyancy name='buoyancy_sphere'>
+      <link_name>base_gate::red_buoy::link</link_name>
+      <pose>0 0 -0.48 0 0 0</pose>
+      <geometry>
+        <sphere>
+          <radius>0.23</radius>
+        </sphere>
+      </geometry>
+    </buoyancy>
+  </plugin>
+  <frame name='base_gate::white_buoy_left::__model__' attached_to='base_gate::white_buoy_left::link'>
+    <pose relative_to='base_gate::__model__'>0 5 0 0 -0 0</pose>
+  </frame>
+  <link name='base_gate::white_buoy_left::link'>
+    <inertial>
+      <pose>0 0 -2 0 -0 0</pose>
+      <mass>25</mass>
+      <inertia>
+        <ixx>1</ixx>
+        <ixy>0</ixy>
+        <ixz>0</ixz>
+        <iyy>1</iyy>
+        <iyz>0</iyz>
+        <izz>0.1</izz>
+      </inertia>
+    </inertial>
+    <collision name='collision_inner'>
+      <pose>0 0 0.367 0 -0 0</pose>
+      <geometry>
+        <cylinder>
+          <radius>0.13</radius>
+          <length>1.25</length>
+        </cylinder>
+      </geometry>
+    </collision>
+    <collision name='collision_outer'>
+      <pose>0 0 -0.075 0 -0 0</pose>
+      <geometry>
+        <cylinder>
+          <radius>0.23</radius>
+          <length>0.16</length>
+        </cylinder>
+      </geometry>
+    </collision>
+    <visual name='visual'>
+      <geometry>
+        <mesh>
+          <uri>model://surmark46104/mesh/surmark46104.dae</uri>
+        </mesh>
+      </geometry>
+      <material>
+        <script>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+          <name>Gazebo/White</name>
+        </script>
+      </material>
+    </visual>
+    <pose relative_to='base_gate::white_buoy_left::__model__'>0 0 0 0 -0 0</pose>
+  </link>
+  <plugin name='BuoyancyPlugin' filename='libbuoyancy_gazebo_plugin.so'>
+    <wave_model>ocean_waves</wave_model>
+    <fluid_density>1000</fluid_density>
+    <fluid_level>0.0</fluid_level>
+    <linear_drag>25.0</linear_drag>
+    <angular_drag>2.0</angular_drag>
+    <buoyancy name='buoyancy_sphere'>
+      <link_name>base_gate::white_buoy_left::link</link_name>
+      <pose>0 0 -0.08 0 0 0</pose>
+      <geometry>
+        <sphere>
+          <radius>0.23</radius>
+        </sphere>
+      </geometry>
+    </buoyancy>
+  </plugin>
+  <frame name='base_gate::white_buoy_right::__model__' attached_to='base_gate::white_buoy_right::link'>
+    <pose relative_to='base_gate::__model__'>0 -5 0 0 -0 0</pose>
+  </frame>
+  <link name='base_gate::white_buoy_right::link'>
+    <inertial>
+      <pose>0 0 -2 0 -0 0</pose>
+      <mass>25</mass>
+      <inertia>
+        <ixx>1</ixx>
+        <ixy>0</ixy>
+        <ixz>0</ixz>
+        <iyy>1</iyy>
+        <iyz>0</iyz>
+        <izz>0.1</izz>
+      </inertia>
+    </inertial>
+    <collision name='collision_inner'>
+      <pose>0 0 0.367 0 -0 0</pose>
+      <geometry>
+        <cylinder>
+          <radius>0.13</radius>
+          <length>1.25</length>
+        </cylinder>
+      </geometry>
+    </collision>
+    <collision name='collision_outer'>
+      <pose>0 0 -0.075 0 -0 0</pose>
+      <geometry>
+        <cylinder>
+          <radius>0.23</radius>
+          <length>0.16</length>
+        </cylinder>
+      </geometry>
+    </collision>
+    <visual name='visual'>
+      <geometry>
+        <mesh>
+          <uri>model://surmark46104/mesh/surmark46104.dae</uri>
+        </mesh>
+      </geometry>
+      <material>
+        <script>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+          <name>Gazebo/White</name>
+        </script>
+      </material>
+    </visual>
+    <pose relative_to='base_gate::white_buoy_right::__model__'>0 0 0 0 -0 0</pose>
+  </link>
+  <plugin name='BuoyancyPlugin' filename='libbuoyancy_gazebo_plugin.so'>
+    <wave_model>ocean_waves</wave_model>
+    <fluid_density>1000</fluid_density>
+    <fluid_level>0.0</fluid_level>
+    <linear_drag>25.0</linear_drag>
+    <angular_drag>2.0</angular_drag>
+    <buoyancy name='buoyancy_sphere'>
+      <link_name>base_gate::white_buoy_right::link</link_name>
+      <pose>0 0 -0.08 0 0 0</pose>
+      <geometry>
+        <sphere>
+          <radius>0.23</radius>
+        </sphere>
+      </geometry>
+    </buoyancy>
+  </plugin>
+  <frame name='base_gate::green_buoy::__model__' attached_to='base_gate::green_buoy::link'>
+    <pose relative_to='base_gate::__model__'>0 -15 0 0 -0 0</pose>
+  </frame>
+  <link name='base_gate::green_buoy::link'>
+    <inertial>
+      <pose>0 0 -2 0 -0 0</pose>
+      <mass>25</mass>
+      <inertia>
+        <ixx>1</ixx>
+        <ixy>0</ixy>
+        <ixz>0</ixz>
+        <iyy>1</iyy>
+        <iyz>0</iyz>
+        <izz>0.1</izz>
+      </inertia>
+    </inertial>
+    <collision name='collision_inner'>
+      <pose>0 0 -0.02 0 -0 0</pose>
+      <geometry>
+        <cylinder>
+          <radius>0.15</radius>
+          <length>1.18</length>
+        </cylinder>
+      </geometry>
+    </collision>
+    <collision name='collision_outer'>
+      <pose>0 0 -0.31 0 -0 0</pose>
+      <geometry>
+        <cylinder>
+          <radius>0.24</radius>
+          <length>0.2</length>
+        </cylinder>
+      </geometry>
+    </collision>
+    <visual name='visual'>
+      <geometry>
+        <mesh>
+          <uri>model://surmark950400/mesh/surmark950400.dae</uri>
+        </mesh>
+      </geometry>
+      <material>
+        <script>
+          <uri>model://surmark950400/materials/scripts/surmark950400.material</uri>
+          <name>surmark950400/Green</name>
+        </script>
+      </material>
+    </visual>
+    <pose relative_to='base_gate::green_buoy::__model__'>0 0 0 0 -0 0</pose>
+  </link>
+  <plugin name='BuoyancyPlugin' filename='libbuoyancy_gazebo_plugin.so'>
+    <wave_model>ocean_waves</wave_model>
+    <fluid_density>1000</fluid_density>
+    <fluid_level>0.0</fluid_level>
+    <linear_drag>25.0</linear_drag>
+    <angular_drag>2.0</angular_drag>
+    <buoyancy name='buoyancy_sphere'>
+      <link_name>base_gate::green_buoy::link</link_name>
+      <pose>0 0 -0.31 0 0 0</pose>
+      <geometry>
+        <sphere>
+          <radius>0.23</radius>
+        </sphere>
+      </geometry>
+    </buoyancy>
+  </plugin>
+  <frame name='circle_buoy::__model__' attached_to='circle_buoy::link'>
+    <pose relative_to='__model__'>30 0 0 0 -0 0</pose>
+  </frame>
+  <link name='circle_buoy::link'>
+    <inertial>
+      <pose>0 0 -2 0 -0 0</pose>
+      <mass>25</mass>
+      <inertia>
+        <ixx>1</ixx>
+        <ixy>0</ixy>
+        <ixz>0</ixz>
+        <iyy>1</iyy>
+        <iyz>0</iyz>
+        <izz>0.1</izz>
+      </inertia>
+    </inertial>
+    <collision name='collision_inner'>
+      <pose>0 0 0.367 0 -0 0</pose>
+      <geometry>
+        <cylinder>
+          <radius>0.13</radius>
+          <length>1.25</length>
+        </cylinder>
+      </geometry>
+    </collision>
+    <collision name='collision_outer'>
+      <pose>0 0 -0.075 0 -0 0</pose>
+      <geometry>
+        <cylinder>
+          <radius>0.23</radius>
+          <length>0.16</length>
+        </cylinder>
+      </geometry>
+    </collision>
+    <visual name='visual'>
+      <geometry>
+        <mesh>
+          <uri>model://surmark46104/mesh/surmark46104.dae</uri>
+        </mesh>
+      </geometry>
+      <material>
+        <script>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+          <name>Gazebo/White</name>
+        </script>
+      </material>
+    </visual>
+    <visual name='cover_visual'>
+      <pose>0 0 0.492 0 -0 0</pose>
+      <geometry>
+        <cylinder>
+          <radius>0.131</radius>
+          <length>1</length>
+        </cylinder>
+      </geometry>
+      <material>
+        <script>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+          <name>Gazebo/Black</name>
+        </script>
+      </material>
+    </visual>
+    <pose relative_to='circle_buoy::__model__'>0 0 0 0 -0 0</pose>
+  </link>
+  <plugin name='BuoyancyPlugin' filename='libbuoyancy_gazebo_plugin.so'>
+    <wave_model>ocean_waves</wave_model>
+    <fluid_density>1000</fluid_density>
+    <fluid_level>0.0</fluid_level>
+    <linear_drag>25.0</linear_drag>
+    <angular_drag>2.0</angular_drag>
+    <buoyancy name='buoyancy_sphere'>
+      <link_name>circle_buoy::link</link_name>
+      <pose>0 0 -0.08 0 0 0</pose>
+      <geometry>
+        <sphere>
+          <radius>0.23</radius>
+        </sphere>
+      </geometry>
+    </buoyancy>
+  </plugin>
+  <pose>55 -50 0 0 0 -1.3</pose>
+</model>
+
+roslaunch offboard_control mavros_posix_sitl.launch 
+... logging to /home/aaron/.ros/log/e0cfae1c-ad79-11ed-9bcf-d3fee7b478ea/roslaunch-aaron-Swift-SF314-52-6212.log
+Checking log directory for disk usage. This may take a while.
+Press Ctrl-C to interrupt
+Done checking log file disk usage. Usage is <1GB.
+
+xacro: in-order processing became default in ROS Melodic. You can drop the option.
+started roslaunch server http://aaron-Swift-SF314-52:46185/
+
+SUMMARY
+========
+
+CLEAR PARAMETERS
+ * /mavros/
+
+PARAMETERS
+ * /gazebo/enable_ros_network: True
+ * /mavros/camera/frame_id: base_link
+ * /mavros/cmd/use_comp_id_system_control: False
+ * /mavros/conn/heartbeat_rate: 1.0
+ * /mavros/conn/system_time_rate: 1.0
+ * /mavros/conn/timeout: 10.0
+ * /mavros/conn/timesync_rate: 10.0
+ * /mavros/distance_sensor/hrlv_ez4_pub/field_of_view: 0.0
+ * /mavros/distance_sensor/hrlv_ez4_pub/frame_id: hrlv_ez4_sonar
+ * /mavros/distance_sensor/hrlv_ez4_pub/id: 0
+ * /mavros/distance_sensor/hrlv_ez4_pub/orientation: PITCH_270
+ * /mavros/distance_sensor/hrlv_ez4_pub/send_tf: True
+ * /mavros/distance_sensor/hrlv_ez4_pub/sensor_position/x: 0.0
+ * /mavros/distance_sensor/hrlv_ez4_pub/sensor_position/y: 0.0
+ * /mavros/distance_sensor/hrlv_ez4_pub/sensor_position/z: -0.1
+ * /mavros/distance_sensor/laser_1_sub/id: 3
+ * /mavros/distance_sensor/laser_1_sub/orientation: PITCH_270
+ * /mavros/distance_sensor/laser_1_sub/subscriber: True
+ * /mavros/distance_sensor/lidarlite_pub/field_of_view: 0.0
+ * /mavros/distance_sensor/lidarlite_pub/frame_id: lidarlite_laser
+ * /mavros/distance_sensor/lidarlite_pub/id: 1
+ * /mavros/distance_sensor/lidarlite_pub/orientation: PITCH_270
+ * /mavros/distance_sensor/lidarlite_pub/send_tf: True
+ * /mavros/distance_sensor/lidarlite_pub/sensor_position/x: 0.0
+ * /mavros/distance_sensor/lidarlite_pub/sensor_position/y: 0.0
+ * /mavros/distance_sensor/lidarlite_pub/sensor_position/z: -0.1
+ * /mavros/distance_sensor/sonar_1_sub/horizontal_fov_ratio: 1.0
+ * /mavros/distance_sensor/sonar_1_sub/id: 2
+ * /mavros/distance_sensor/sonar_1_sub/orientation: PITCH_270
+ * /mavros/distance_sensor/sonar_1_sub/subscriber: True
+ * /mavros/distance_sensor/sonar_1_sub/vertical_fov_ratio: 1.0
+ * /mavros/fake_gps/eph: 2.0
+ * /mavros/fake_gps/epv: 2.0
+ * /mavros/fake_gps/fix_type: 3
+ * /mavros/fake_gps/geo_origin/alt: 408.0
+ * /mavros/fake_gps/geo_origin/lat: 47.3667
+ * /mavros/fake_gps/geo_origin/lon: 8.55
+ * /mavros/fake_gps/gps_rate: 5.0
+ * /mavros/fake_gps/mocap_transform: True
+ * /mavros/fake_gps/satellites_visible: 5
+ * /mavros/fake_gps/tf/child_frame_id: fix
+ * /mavros/fake_gps/tf/frame_id: map
+ * /mavros/fake_gps/tf/listen: False
+ * /mavros/fake_gps/tf/rate_limit: 10.0
+ * /mavros/fake_gps/tf/send: False
+ * /mavros/fake_gps/use_mocap: True
+ * /mavros/fake_gps/use_vision: False
+ * /mavros/fcu_protocol: v2.0
+ * /mavros/fcu_url: udp://:14540@loca...
+ * /mavros/gcs_url: 
+ * /mavros/global_position/child_frame_id: base_link
+ * /mavros/global_position/frame_id: map
+ * /mavros/global_position/gps_uere: 1.0
+ * /mavros/global_position/rot_covariance: 99999.0
+ * /mavros/global_position/tf/child_frame_id: base_link
+ * /mavros/global_position/tf/frame_id: map
+ * /mavros/global_position/tf/global_frame_id: earth
+ * /mavros/global_position/tf/send: False
+ * /mavros/global_position/use_relative_alt: True
+ * /mavros/image/frame_id: px4flow
+ * /mavros/imu/angular_velocity_stdev: 0.0003490659 // 0...
+ * /mavros/imu/frame_id: base_link
+ * /mavros/imu/linear_acceleration_stdev: 0.0003
+ * /mavros/imu/magnetic_stdev: 0.0
+ * /mavros/imu/orientation_stdev: 1.0
+ * /mavros/landing_target/camera/fov_x: 2.0071286398
+ * /mavros/landing_target/camera/fov_y: 2.0071286398
+ * /mavros/landing_target/image/height: 480
+ * /mavros/landing_target/image/width: 640
+ * /mavros/landing_target/land_target_type: VISION_FIDUCIAL
+ * /mavros/landing_target/listen_lt: False
+ * /mavros/landing_target/mav_frame: LOCAL_NED
+ * /mavros/landing_target/target_size/x: 0.3
+ * /mavros/landing_target/target_size/y: 0.3
+ * /mavros/landing_target/tf/child_frame_id: camera_center
+ * /mavros/landing_target/tf/frame_id: landing_target
+ * /mavros/landing_target/tf/listen: False
+ * /mavros/landing_target/tf/rate_limit: 10.0
+ * /mavros/landing_target/tf/send: True
+ * /mavros/local_position/frame_id: map
+ * /mavros/local_position/tf/child_frame_id: base_link
+ * /mavros/local_position/tf/frame_id: map
+ * /mavros/local_position/tf/send: False
+ * /mavros/local_position/tf/send_fcu: False
+ * /mavros/mission/pull_after_gcs: True
+ * /mavros/mission/use_mission_item_int: True
+ * /mavros/mocap/use_pose: True
+ * /mavros/mocap/use_tf: False
+ * /mavros/mount/debounce_s: 4.0
+ * /mavros/mount/err_threshold_deg: 10.0
+ * /mavros/mount/negate_measured_pitch: False
+ * /mavros/mount/negate_measured_roll: False
+ * /mavros/mount/negate_measured_yaw: False
+ * /mavros/odometry/fcu/odom_child_id_des: base_link
+ * /mavros/odometry/fcu/odom_parent_id_des: map
+ * /mavros/plugin_blacklist: ['safety_area', '...
+ * /mavros/plugin_whitelist: []
+ * /mavros/px4flow/frame_id: px4flow
+ * /mavros/px4flow/ranger_fov: 0.118682
+ * /mavros/px4flow/ranger_max_range: 5.0
+ * /mavros/px4flow/ranger_min_range: 0.3
+ * /mavros/safety_area/p1/x: 1.0
+ * /mavros/safety_area/p1/y: 1.0
+ * /mavros/safety_area/p1/z: 1.0
+ * /mavros/safety_area/p2/x: -1.0
+ * /mavros/safety_area/p2/y: -1.0
+ * /mavros/safety_area/p2/z: -1.0
+ * /mavros/setpoint_accel/send_force: False
+ * /mavros/setpoint_attitude/reverse_thrust: False
+ * /mavros/setpoint_attitude/tf/child_frame_id: target_attitude
+ * /mavros/setpoint_attitude/tf/frame_id: map
+ * /mavros/setpoint_attitude/tf/listen: False
+ * /mavros/setpoint_attitude/tf/rate_limit: 50.0
+ * /mavros/setpoint_attitude/use_quaternion: False
+ * /mavros/setpoint_position/mav_frame: LOCAL_NED
+ * /mavros/setpoint_position/tf/child_frame_id: target_position
+ * /mavros/setpoint_position/tf/frame_id: map
+ * /mavros/setpoint_position/tf/listen: False
+ * /mavros/setpoint_position/tf/rate_limit: 50.0
+ * /mavros/setpoint_raw/thrust_scaling: 1.0
+ * /mavros/setpoint_velocity/mav_frame: LOCAL_NED
+ * /mavros/startup_px4_usb_quirk: False
+ * /mavros/sys/disable_diag: False
+ * /mavros/sys/min_voltage: 10.0
+ * /mavros/target_component_id: 1
+ * /mavros/target_system_id: 1
+ * /mavros/tdr_radio/low_rssi: 40
+ * /mavros/time/time_ref_source: fcu
+ * /mavros/time/timesync_avg_alpha: 0.6
+ * /mavros/time/timesync_mode: MAVLINK
+ * /mavros/vibration/frame_id: base_link
+ * /mavros/vision_pose/tf/child_frame_id: vision_estimate
+ * /mavros/vision_pose/tf/frame_id: odom
+ * /mavros/vision_pose/tf/listen: False
+ * /mavros/vision_pose/tf/rate_limit: 10.0
+ * /mavros/vision_speed/listen_twist: True
+ * /mavros/vision_speed/twist_cov: True
+ * /mavros/wheel_odometry/child_frame_id: base_link
+ * /mavros/wheel_odometry/count: 2
+ * /mavros/wheel_odometry/frame_id: odom
+ * /mavros/wheel_odometry/send_raw: True
+ * /mavros/wheel_odometry/send_twist: False
+ * /mavros/wheel_odometry/tf/child_frame_id: base_link
+ * /mavros/wheel_odometry/tf/frame_id: odom
+ * /mavros/wheel_odometry/tf/send: False
+ * /mavros/wheel_odometry/use_rpm: False
+ * /mavros/wheel_odometry/vel_error: 0.1
+ * /mavros/wheel_odometry/wheel0/radius: 0.05
+ * /mavros/wheel_odometry/wheel0/x: 0.0
+ * /mavros/wheel_odometry/wheel0/y: -0.15
+ * /mavros/wheel_odometry/wheel1/radius: 0.05
+ * /mavros/wheel_odometry/wheel1/x: 0.0
+ * /mavros/wheel_odometry/wheel1/y: 0.15
+ * /rosdistro: noetic
+ * /rosversion: 1.15.15
+ * /use_sim_time: True
+ * /wamv/robot_description: <?xml version="1....
+
+NODES
+  /
+    gazebo (gazebo_ros/gzserver)
+    gazebo_gui (gazebo_ros/gzclient)
+    mavros (mavros/mavros_node)
+    sitl (px4/px4)
+    spawn_model (gazebo_ros/spawn_model)
+
+auto-starting new master
+process[master]: started with pid [6222]
+ROS_MASTER_URI=http://localhost:11311
+
+setting /run_id to e0cfae1c-ad79-11ed-9bcf-d3fee7b478ea
+process[rosout-1]: started with pid [6232]
+started core service [/rosout]
+process[sitl-2]: started with pid [6240]
+
+______  __   __    ___ 
+| ___ \ \ \ / /   /   |
+| |_/ /  \ V /   / /| |
+|  __/   /   \  / /_| |
+| |     / /^\ \ \___  |
+\_|     \/   \/     |_/
+
+px4 starting.
+
+INFO  [px4] startup script: /bin/sh etc/init.d-posix/rcS 0
+INFO  [init] found model autostart file as SYS_AUTOSTART=1070
+process[gazebo-3]: started with pid [6253]
+INFO  [param] selected parameter default file parameters.bson
+process[gazebo_gui-4]: started with pid [6264]
+INFO  [param] importing from 'parameters.bson'
+INFO  [parameters] BSON document size 295 bytes, decoded 295 bytes (INT32:12, FLOAT:3)
+INFO  [param] selected parameter backup file parameters_backup.bson
+process[spawn_model-5]: started with pid [6270]
+process[mavros-6]: started with pid [6274]
+[ INFO] [1676497450.860852178]: FCU URL: udp://:14540@localhost:14557
+[ INFO] [1676497450.864349461]: udp0: Bind address: 0.0.0.0:14540
+[ INFO] [1676497450.864617123]: udp0: Remote address: 127.0.0.1:14557
+[ INFO] [1676497450.864769708]: GCS bridge disabled
+[ INFO] [1676497450.886148425]: Plugin 3dr_radio loaded
+[ INFO] [1676497450.892768670]: Plugin 3dr_radio initialized
+[ INFO] [1676497450.893062532]: Plugin actuator_control loaded
+[ INFO] [1676497450.898499595]: Plugin actuator_control initialized
+[ INFO] [1676497450.898737625]: Plugin altitude loaded
+[ INFO] [1676497450.900105642]: Plugin altitude initialized
+[ INFO] [1676497450.900336761]: Plugin command loaded
+[ INFO] [1676497450.910827591]: Plugin command initialized
+[ INFO] [1676497450.911056167]: Plugin ftp loaded
+[ INFO] [1676497450.924190556]: Plugin ftp initialized
+[ INFO] [1676497450.924352768]: Plugin geofence loaded
+[ INFO] [1676497450.930949725]: Plugin geofence initialized
+[ INFO] [1676497450.931143546]: Plugin global_position loaded
+[ INFO] [1676497450.958858535]: Plugin global_position initialized
+[ INFO] [1676497450.959017777]: Plugin hil loaded
+[ INFO] [1676497450.976714901]: Plugin hil initialized
+[ INFO] [1676497450.976860129]: Plugin home_position loaded
+[ INFO] [1676497450.981199220]: Plugin home_position initialized
+[ INFO] [1676497450.981372499]: Plugin imu loaded
+[ INFO] [1676497451.000920231]: Plugin imu initialized
+[ INFO] [1676497451.001073162]: Plugin local_position loaded
+[ INFO] [1676497451.014345382]: Plugin local_position initialized
+[ INFO] [1676497451.014497150]: Plugin manual_control loaded
+[ INFO] [1676497451.025190029]: Plugin manual_control initialized
+[ INFO] [1676497451.025635915]: Plugin nav_controller_output loaded
+[ INFO] [1676497451.027198473]: Plugin nav_controller_output initialized
+[ INFO] [1676497451.027462449]: Plugin param loaded
+[ INFO] [1676497451.032029001]: Plugin param initialized
+[ INFO] [1676497451.032274016]: Plugin rallypoint loaded
+[ INFO] [1676497451.036996661]: Plugin rallypoint initialized
+[ INFO] [1676497451.037128917]: Plugin rc_io loaded
+[ INFO] [1676497451.042242930]: Plugin rc_io initialized
+[ INFO] [1676497451.042434668]: Plugin safety_area blacklisted
+[ INFO] [1676497451.042603542]: Plugin setpoint_accel loaded
+[ INFO] [1676497451.050085504]: Plugin setpoint_accel initialized
+[ INFO] [1676497451.050337730]: Plugin setpoint_attitude loaded
+[ INFO] [1676497451.069841410]: Plugin setpoint_attitude initialized
+[ INFO] [1676497451.070081794]: Plugin setpoint_position loaded
+[ INFO] [1676497451.098140635]: Plugin setpoint_position initialized
+[ INFO] [1676497451.098277546]: Plugin setpoint_raw loaded
+[ INFO] [1676497451.113707186]: Plugin setpoint_raw initialized
+[ INFO] [1676497451.113854735]: Plugin setpoint_trajectory loaded
+[ INFO] [1676497451.125054440]: Plugin setpoint_trajectory initialized
+[ INFO] [1676497451.125368909]: Plugin setpoint_velocity loaded
+[ INFO] [1676497451.133712673]: Plugin setpoint_velocity initialized
+[ INFO] [1676497451.133970475]: Plugin sys_status loaded
+INFO  [dataman] data manager file './dataman' size is 7866640 bytes
+[ INFO] [1676497451.157624778]: Plugin sys_status initialized
+[ INFO] [1676497451.157925455]: Plugin sys_time loaded
+[ INFO] [1676497451.166397013]: TM: Timesync mode: MAVLINK
+[ INFO] [1676497451.167198406]: TM: Not publishing sim time
+[ INFO] [1676497451.169074322]: Plugin sys_time initialized
+[ INFO] [1676497451.169314451]: Plugin vfr_hud loaded
+[ INFO] [1676497451.170599203]: Plugin vfr_hud initialized
+[ INFO] [1676497451.170815141]: Plugin waypoint loaded
+[ INFO] [1676497451.182678064]: Plugin waypoint initialized
+[ INFO] [1676497451.182983020]: Plugin wind_estimation loaded
+etc/init.d-posix/rcS: 22: [: Illegal number: 
+[ INFO] [1676497451.184288410]: Plugin wind_estimation initialized
+[ INFO] [1676497451.184566557]: Built-in SIMD instructions: SSE, SSE2
+[ INFO] [1676497451.184721199]: Built-in MAVLink package version: 2022.12.30
+[ INFO] [1676497451.184919698]: Known MAVLink dialects: common ardupilotmega ASLUAV AVSSUAS all cubepilot development icarous matrixpilot paparazzi standard storm32 uAvionix ualberta
+[ INFO] [1676497451.185068464]: MAVROS started. MY ID 1.240, TARGET ID 1.1
+INFO  [init] PX4_SIM_HOSTNAME: localhost
+INFO  [simulator_mavlink] Waiting for simulator to accept connection on TCP port 4560
+[ INFO] [1676497451.686376075]: Finished loading Gazebo ROS API Plugin.
+[ INFO] [1676497451.689286390]: waitForService: Service [/gazebo/set_physics_properties] has not been advertised, waiting...
+[ INFO] [1676497451.989278765]: Finished loading Gazebo ROS API Plugin.
+[ INFO] [1676497451.991380159]: waitForService: Service [/gazebo_gui/set_physics_properties] has not been advertised, waiting...
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Warning [parser.cc:833] XML Attribute[version] in element[sdf] not defined in SDF, ignoring.
+Error: Non-unique names detected in type plugin in
+<model name='robotx_navigation_challenge'>
+  <frame name='gate_start_red::__model__' attached_to='gate_start_red::link'>
+    <pose relative_to='__model__'>0 5 0 0 -0 0</pose>
+  </frame>
+  <link name='gate_start_red::link'>
+    <inertial>
+      <pose>0 0 -2 0 -0 0</pose>
+      <mass>25</mass>
+      <inertia>
+        <ixx>1</ixx>
+        <ixy>0</ixy>
+        <ixz>0</ixz>
+        <iyy>1</iyy>
+        <iyz>0</iyz>
+        <izz>0.1</izz>
+      </inertia>
+    </inertial>
+    <collision name='collision_inner'>
+      <pose>0 0 -0.01 0 -0 0</pose>
+      <geometry>
+        <cylinder>
+          <radius>0.15</radius>
+          <length>1.26</length>
+        </cylinder>
+      </geometry>
+    </collision>
+    <collision name='collision_outer'>
+      <pose>0 0 -0.48 0 -0 0</pose>
+      <geometry>
+        <cylinder>
+          <radius>0.24</radius>
+          <length>0.15</length>
+        </cylinder>
+      </geometry>
+    </collision>
+    <visual name='visual'>
+      <geometry>
+        <mesh>
+          <uri>model://surmark950410/mesh/surmark950410.dae</uri>
+        </mesh>
+      </geometry>
+      <material>
+        <script>
+          <uri>model://surmark950410/materials/scripts/surmark950410.material</uri>
+          <name>surmark950410/Red</name>
+        </script>
+      </material>
+    </visual>
+    <pose relative_to='gate_start_red::__model__'>0 0 0 0 -0 0</pose>
+  </link>
+  <plugin name='BuoyancyPlugin' filename='libbuoyancy_gazebo_plugin.so'>
+    <wave_model>ocean_waves</wave_model>
+    <fluid_density>1000</fluid_density>
+    <fluid_level>0.0</fluid_level>
+    <linear_drag>25.0</linear_drag>
+    <angular_drag>2.0</angular_drag>
+    <buoyancy name='buoyancy_sphere'>
+      <link_name>gate_start_red::link</link_name>
+      <pose>0 0 -0.48 0 0 0</pose>
+      <geometry>
+        <sphere>
+          <radius>0.23</radius>
+        </sphere>
+      </geometry>
+    </buoyancy>
+  </plugin>
+  <frame name='gate_start_green::__model__' attached_to='gate_start_green::link'>
+    <pose relative_to='__model__'>0 -5 0 0 -0 0</pose>
+  </frame>
+  <link name='gate_start_green::link'>
+    <inertial>
+      <pose>0 0 -2 0 -0 0</pose>
+      <mass>25</mass>
+      <inertia>
+        <ixx>1</ixx>
+        <ixy>0</ixy>
+        <ixz>0</ixz>
+        <iyy>1</iyy>
+        <iyz>0</iyz>
+        <izz>0.1</izz>
+      </inertia>
+    </inertial>
+    <collision name='collision_inner'>
+      <pose>0 0 -0.02 0 -0 0</pose>
+      <geometry>
+        <cylinder>
+          <radius>0.15</radius>
+          <length>1.18</length>
+        </cylinder>
+      </geometry>
+    </collision>
+    <collision name='collision_outer'>
+      <pose>0 0 -0.31 0 -0 0</pose>
+      <geometry>
+        <cylinder>
+          <radius>0.24</radius>
+          <length>0.2</length>
+        </cylinder>
+      </geometry>
+    </collision>
+    <visual name='visual'>
+      <geometry>
+        <mesh>
+          <uri>model://surmark950400/mesh/surmark950400.dae</uri>
+        </mesh>
+      </geometry>
+      <material>
+        <script>
+          <uri>model://surmark950400/materials/scripts/surmark950400.material</uri>
+          <name>surmark950400/Green</name>
+        </script>
+      </material>
+    </visual>
+    <pose relative_to='gate_start_green::__model__'>0 0 0 0 -0 0</pose>
+  </link>
+  <plugin name='BuoyancyPlugin' filename='libbuoyancy_gazebo_plugin.so'>
+    <wave_model>ocean_waves</wave_model>
+    <fluid_density>1000</fluid_density>
+    <fluid_level>0.0</fluid_level>
+    <linear_drag>25.0</linear_drag>
+    <angular_drag>2.0</angular_drag>
+    <buoyancy name='buoyancy_sphere'>
+      <link_name>gate_start_green::link</link_name>
+      <pose>0 0 -0.31 0 0 0</pose>
+      <geometry>
+        <sphere>
+          <radius>0.23</radius>
+        </sphere>
+      </geometry>
+    </buoyancy>
+  </plugin>
+  <frame name='gate_end_red::__model__' attached_to='gate_end_red::link'>
+    <pose relative_to='__model__'>30 5 0 0 -0 0</pose>
+  </frame>
+  <link name='gate_end_red::link'>
+    <inertial>
+      <pose>0 0 -2 0 -0 0</pose>
+      <mass>25</mass>
+      <inertia>
+        <ixx>1</ixx>
+        <ixy>0</ixy>
+        <ixz>0</ixz>
+        <iyy>1</iyy>
+        <iyz>0</iyz>
+        <izz>0.1</izz>
+      </inertia>
+    </inertial>
+    <collision name='collision_inner'>
+      <pose>0 0 -0.01 0 -0 0</pose>
+      <geometry>
+        <cylinder>
+          <radius>0.15</radius>
+          <length>1.26</length>
+        </cylinder>
+      </geometry>
+    </collision>
+    <collision name='collision_outer'>
+      <pose>0 0 -0.48 0 -0 0</pose>
+      <geometry>
+        <cylinder>
+          <radius>0.24</radius>
+          <length>0.15</length>
+        </cylinder>
+      </geometry>
+    </collision>
+    <visual name='visual'>
+      <geometry>
+        <mesh>
+          <uri>model://surmark950410/mesh/surmark950410.dae</uri>
+        </mesh>
+      </geometry>
+      <material>
+        <script>
+          <uri>model://surmark950410/materials/scripts/surmark950410.material</uri>
+          <name>surmark950410/Red</name>
+        </script>
+      </material>
+    </visual>
+    <pose relative_to='gate_end_red::__model__'>0 0 0 0 -0 0</pose>
+  </link>
+  <plugin name='BuoyancyPlugin' filename='libbuoyancy_gazebo_plugin.so'>
+    <wave_model>ocean_waves</wave_model>
+    <fluid_density>1000</fluid_density>
+    <fluid_level>0.0</fluid_level>
+    <linear_drag>25.0</linear_drag>
+    <angular_drag>2.0</angular_drag>
+    <buoyancy name='buoyancy_sphere'>
+      <link_name>gate_end_red::link</link_name>
+      <pose>0 0 -0.48 0 0 0</pose>
+      <geometry>
+        <sphere>
+          <radius>0.23</radius>
+        </sphere>
+      </geometry>
+    </buoyancy>
+  </plugin>
+  <frame name='gate_end_green::__model__' attached_to='gate_end_green::link'>
+    <pose relative_to='__model__'>30 -5 0 0 -0 0</pose>
+  </frame>
+  <link name='gate_end_green::link'>
+    <inertial>
+      <pose>0 0 -2 0 -0 0</pose>
+      <mass>25</mass>
+      <inertia>
+        <ixx>1</ixx>
+        <ixy>0</ixy>
+        <ixz>0</ixz>
+        <iyy>1</iyy>
+        <iyz>0</iyz>
+        <izz>0.1</izz>
+      </inertia>
+    </inertial>
+    <collision name='collision_inner'>
+      <pose>0 0 -0.02 0 -0 0</pose>
+      <geometry>
+        <cylinder>
+          <radius>0.15</radius>
+          <length>1.18</length>
+        </cylinder>
+      </geometry>
+    </collision>
+    <collision name='collision_outer'>
+      <pose>0 0 -0.31 0 -0 0</pose>
+      <geometry>
+        <cylinder>
+          <radius>0.24</radius>
+          <length>0.2</length>
+        </cylinder>
+      </geometry>
+    </collision>
+    <visual name='visual'>
+      <geometry>
+        <mesh>
+          <uri>model://surmark950400/mesh/surmark950400.dae</uri>
+        </mesh>
+      </geometry>
+      <material>
+        <script>
+          <uri>model://surmark950400/materials/scripts/surmark950400.material</uri>
+          <name>surmark950400/Green</name>
+        </script>
+      </material>
+    </visual>
+    <pose relative_to='gate_end_green::__model__'>0 0 0 0 -0 0</pose>
+  </link>
+  <plugin name='BuoyancyPlugin' filename='libbuoyancy_gazebo_plugin.so'>
+    <wave_model>ocean_waves</wave_model>
+    <fluid_density>1000</fluid_density>
+    <fluid_level>0.0</fluid_level>
+    <linear_drag>25.0</linear_drag>
+    <angular_drag>2.0</angular_drag>
+    <buoyancy name='buoyancy_sphere'>
+      <link_name>gate_end_green::link</link_name>
+      <pose>0 0 -0.31 0 0 0</pose>
+      <geometry>
+        <sphere>
+          <radius>0.23</radius>
+        </sphere>
+      </geometry>
+    </buoyancy>
+  </plugin>
+  <pose>58 68 2 0 -0 0.4</pose>
+</model>
+
+Error: Non-unique names detected in type plugin in
+<model name='robotx_2016_qualifying_pinger_transit'>
+  <frame name='base_gate::__model__' attached_to='base_gate::red_buoy::link'>
+    <pose relative_to='__model__'>0 0 0 0 -0 0</pose>
+  </frame>
+  <frame name='base_gate::red_buoy::__model__' attached_to='base_gate::red_buoy::link'>
+    <pose relative_to='base_gate::__model__'>0 15 0 0 -0 0</pose>
+  </frame>
+  <link name='base_gate::red_buoy::link'>
+    <inertial>
+      <pose>0 0 -2 0 -0 0</pose>
+      <mass>25</mass>
+      <inertia>
+        <ixx>1</ixx>
+        <ixy>0</ixy>
+        <ixz>0</ixz>
+        <iyy>1</iyy>
+        <iyz>0</iyz>
+        <izz>0.1</izz>
+      </inertia>
+    </inertial>
+    <collision name='collision_inner'>
+      <pose>0 0 -0.01 0 -0 0</pose>
+      <geometry>
+        <cylinder>
+          <radius>0.15</radius>
+          <length>1.26</length>
+        </cylinder>
+      </geometry>
+    </collision>
+    <collision name='collision_outer'>
+      <pose>0 0 -0.48 0 -0 0</pose>
+      <geometry>
+        <cylinder>
+          <radius>0.24</radius>
+          <length>0.15</length>
+        </cylinder>
+      </geometry>
+    </collision>
+    <visual name='visual'>
+      <geometry>
+        <mesh>
+          <uri>model://surmark950410/mesh/surmark950410.dae</uri>
+        </mesh>
+      </geometry>
+      <material>
+        <script>
+          <uri>model://surmark950410/materials/scripts/surmark950410.material</uri>
+          <name>surmark950410/Red</name>
+        </script>
+      </material>
+    </visual>
+    <pose relative_to='base_gate::red_buoy::__model__'>0 0 0 0 -0 0</pose>
+  </link>
+  <plugin name='BuoyancyPlugin' filename='libbuoyancy_gazebo_plugin.so'>
+    <wave_model>ocean_waves</wave_model>
+    <fluid_density>1000</fluid_density>
+    <fluid_level>0.0</fluid_level>
+    <linear_drag>25.0</linear_drag>
+    <angular_drag>2.0</angular_drag>
+    <buoyancy name='buoyancy_sphere'>
+      <link_name>base_gate::red_buoy::link</link_name>
+      <pose>0 0 -0.48 0 0 0</pose>
+      <geometry>
+        <sphere>
+          <radius>0.23</radius>
+        </sphere>
+      </geometry>
+    </buoyancy>
+  </plugin>
+  <frame name='base_gate::white_buoy_left::__model__' attached_to='base_gate::white_buoy_left::link'>
+    <pose relative_to='base_gate::__model__'>0 5 0 0 -0 0</pose>
+  </frame>
+  <link name='base_gate::white_buoy_left::link'>
+    <inertial>
+      <pose>0 0 -2 0 -0 0</pose>
+      <mass>25</mass>
+      <inertia>
+        <ixx>1</ixx>
+        <ixy>0</ixy>
+        <ixz>0</ixz>
+        <iyy>1</iyy>
+        <iyz>0</iyz>
+        <izz>0.1</izz>
+      </inertia>
+    </inertial>
+    <collision name='collision_inner'>
+      <pose>0 0 0.367 0 -0 0</pose>
+      <geometry>
+        <cylinder>
+          <radius>0.13</radius>
+          <length>1.25</length>
+        </cylinder>
+      </geometry>
+    </collision>
+    <collision name='collision_outer'>
+      <pose>0 0 -0.075 0 -0 0</pose>
+      <geometry>
+        <cylinder>
+          <radius>0.23</radius>
+          <length>0.16</length>
+        </cylinder>
+      </geometry>
+    </collision>
+    <visual name='visual'>
+      <geometry>
+        <mesh>
+          <uri>model://surmark46104/mesh/surmark46104.dae</uri>
+        </mesh>
+      </geometry>
+      <material>
+        <script>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+          <name>Gazebo/White</name>
+        </script>
+      </material>
+    </visual>
+    <pose relative_to='base_gate::white_buoy_left::__model__'>0 0 0 0 -0 0</pose>
+  </link>
+  <plugin name='BuoyancyPlugin' filename='libbuoyancy_gazebo_plugin.so'>
+    <wave_model>ocean_waves</wave_model>
+    <fluid_density>1000</fluid_density>
+    <fluid_level>0.0</fluid_level>
+    <linear_drag>25.0</linear_drag>
+    <angular_drag>2.0</angular_drag>
+    <buoyancy name='buoyancy_sphere'>
+      <link_name>base_gate::white_buoy_left::link</link_name>
+      <pose>0 0 -0.08 0 0 0</pose>
+      <geometry>
+        <sphere>
+          <radius>0.23</radius>
+        </sphere>
+      </geometry>
+    </buoyancy>
+  </plugin>
+  <frame name='base_gate::white_buoy_right::__model__' attached_to='base_gate::white_buoy_right::link'>
+    <pose relative_to='base_gate::__model__'>0 -5 0 0 -0 0</pose>
+  </frame>
+  <link name='base_gate::white_buoy_right::link'>
+    <inertial>
+      <pose>0 0 -2 0 -0 0</pose>
+      <mass>25</mass>
+      <inertia>
+        <ixx>1</ixx>
+        <ixy>0</ixy>
+        <ixz>0</ixz>
+        <iyy>1</iyy>
+        <iyz>0</iyz>
+        <izz>0.1</izz>
+      </inertia>
+    </inertial>
+    <collision name='collision_inner'>
+      <pose>0 0 0.367 0 -0 0</pose>
+      <geometry>
+        <cylinder>
+          <radius>0.13</radius>
+          <length>1.25</length>
+        </cylinder>
+      </geometry>
+    </collision>
+    <collision name='collision_outer'>
+      <pose>0 0 -0.075 0 -0 0</pose>
+      <geometry>
+        <cylinder>
+          <radius>0.23</radius>
+          <length>0.16</length>
+        </cylinder>
+      </geometry>
+    </collision>
+    <visual name='visual'>
+      <geometry>
+        <mesh>
+          <uri>model://surmark46104/mesh/surmark46104.dae</uri>
+        </mesh>
+      </geometry>
+      <material>
+        <script>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+          <name>Gazebo/White</name>
+        </script>
+      </material>
+    </visual>
+    <pose relative_to='base_gate::white_buoy_right::__model__'>0 0 0 0 -0 0</pose>
+  </link>
+  <plugin name='BuoyancyPlugin' filename='libbuoyancy_gazebo_plugin.so'>
+    <wave_model>ocean_waves</wave_model>
+    <fluid_density>1000</fluid_density>
+    <fluid_level>0.0</fluid_level>
+    <linear_drag>25.0</linear_drag>
+    <angular_drag>2.0</angular_drag>
+    <buoyancy name='buoyancy_sphere'>
+      <link_name>base_gate::white_buoy_right::link</link_name>
+      <pose>0 0 -0.08 0 0 0</pose>
+      <geometry>
+        <sphere>
+          <radius>0.23</radius>
+        </sphere>
+      </geometry>
+    </buoyancy>
+  </plugin>
+  <frame name='base_gate::green_buoy::__model__' attached_to='base_gate::green_buoy::link'>
+    <pose relative_to='base_gate::__model__'>0 -15 0 0 -0 0</pose>
+  </frame>
+  <link name='base_gate::green_buoy::link'>
+    <inertial>
+      <pose>0 0 -2 0 -0 0</pose>
+      <mass>25</mass>
+      <inertia>
+        <ixx>1</ixx>
+        <ixy>0</ixy>
+        <ixz>0</ixz>
+        <iyy>1</iyy>
+        <iyz>0</iyz>
+        <izz>0.1</izz>
+      </inertia>
+    </inertial>
+    <collision name='collision_inner'>
+      <pose>0 0 -0.02 0 -0 0</pose>
+      <geometry>
+        <cylinder>
+          <radius>0.15</radius>
+          <length>1.18</length>
+        </cylinder>
+      </geometry>
+    </collision>
+    <collision name='collision_outer'>
+      <pose>0 0 -0.31 0 -0 0</pose>
+      <geometry>
+        <cylinder>
+          <radius>0.24</radius>
+          <length>0.2</length>
+        </cylinder>
+      </geometry>
+    </collision>
+    <visual name='visual'>
+      <geometry>
+        <mesh>
+          <uri>model://surmark950400/mesh/surmark950400.dae</uri>
+        </mesh>
+      </geometry>
+      <material>
+        <script>
+          <uri>model://surmark950400/materials/scripts/surmark950400.material</uri>
+          <name>surmark950400/Green</name>
+        </script>
+      </material>
+    </visual>
+    <pose relative_to='base_gate::green_buoy::__model__'>0 0 0 0 -0 0</pose>
+  </link>
+  <plugin name='BuoyancyPlugin' filename='libbuoyancy_gazebo_plugin.so'>
+    <wave_model>ocean_waves</wave_model>
+    <fluid_density>1000</fluid_density>
+    <fluid_level>0.0</fluid_level>
+    <linear_drag>25.0</linear_drag>
+    <angular_drag>2.0</angular_drag>
+    <buoyancy name='buoyancy_sphere'>
+      <link_name>base_gate::green_buoy::link</link_name>
+      <pose>0 0 -0.31 0 0 0</pose>
+      <geometry>
+        <sphere>
+          <radius>0.23</radius>
+        </sphere>
+      </geometry>
+    </buoyancy>
+  </plugin>
+  <frame name='circle_buoy::__model__' attached_to='circle_buoy::link'>
+    <pose relative_to='__model__'>30 0 0 0 -0 0</pose>
+  </frame>
+  <link name='circle_buoy::link'>
+    <inertial>
+      <pose>0 0 -2 0 -0 0</pose>
+      <mass>25</mass>
+      <inertia>
+        <ixx>1</ixx>
+        <ixy>0</ixy>
+        <ixz>0</ixz>
+        <iyy>1</iyy>
+        <iyz>0</iyz>
+        <izz>0.1</izz>
+      </inertia>
+    </inertial>
+    <collision name='collision_inner'>
+      <pose>0 0 0.367 0 -0 0</pose>
+      <geometry>
+        <cylinder>
+          <radius>0.13</radius>
+          <length>1.25</length>
+        </cylinder>
+      </geometry>
+    </collision>
+    <collision name='collision_outer'>
+      <pose>0 0 -0.075 0 -0 0</pose>
+      <geometry>
+        <cylinder>
+          <radius>0.23</radius>
+          <length>0.16</length>
+        </cylinder>
+      </geometry>
+    </collision>
+    <visual name='visual'>
+      <geometry>
+        <mesh>
+          <uri>model://surmark46104/mesh/surmark46104.dae</uri>
+        </mesh>
+      </geometry>
+      <material>
+        <script>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+          <name>Gazebo/White</name>
+        </script>
+      </material>
+    </visual>
+    <visual name='cover_visual'>
+      <pose>0 0 0.492 0 -0 0</pose>
+      <geometry>
+        <cylinder>
+          <radius>0.131</radius>
+          <length>1</length>
+        </cylinder>
+      </geometry>
+      <material>
+        <script>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+          <name>Gazebo/Black</name>
+        </script>
+      </material>
+    </visual>
+    <pose relative_to='circle_buoy::__model__'>0 0 0 0 -0 0</pose>
+  </link>
+  <plugin name='BuoyancyPlugin' filename='libbuoyancy_gazebo_plugin.so'>
+    <wave_model>ocean_waves</wave_model>
+    <fluid_density>1000</fluid_density>
+    <fluid_level>0.0</fluid_level>
+    <linear_drag>25.0</linear_drag>
+    <angular_drag>2.0</angular_drag>
+    <buoyancy name='buoyancy_sphere'>
+      <link_name>circle_buoy::link</link_name>
+      <pose>0 0 -0.08 0 0 0</pose>
+      <geometry>
+        <sphere>
+          <radius>0.23</radius>
+        </sphere>
+      </geometry>
+    </buoyancy>
+  </plugin>
+  <pose>55 -50 0 0 0 -1.3</pose>
+</model>
+
+[ INFO] [1676497457.079130116]: waitForService: Service [/gazebo/set_physics_properties] is now available.
+[ INFO] [1676497457.140998355]: Physics dynamic reconfigure ready.
+[ INFO] [1676497457.492101934, 0.001000000]: Thruster namespace <wamv/>
+[ INFO] [1676497457.522871512, 0.001000000]: Parameter <zDotW> not found: Using default value of <0.1>.
+[ INFO] [1676497457.522946982, 0.001000000]: Parameter <kDotP> not found: Using default value of <0.1>.
+[ INFO] [1676497457.522984604, 0.001000000]: Parameter <mDotQ> not found: Using default value of <0.1>.
+[ INFO] [1676497457.523045038, 0.001000000]: Parameter <zWW> not found: Using default value of <0>.
+[ INFO] [1676497457.523074003, 0.001000000]: Parameter <kPP> not found: Using default value of <0>.
+[ INFO] [1676497457.523094779, 0.001000000]: Parameter <mQQ> not found: Using default value of <0>.
+[spawn_model-5] process has finished cleanly
+log file: /home/aaron/.ros/log/e0cfae1c-ad79-11ed-9bcf-d3fee7b478ea/spawn_model-5*.log
+[ INFO] [1676497461.270152888, 3.584000000]: New symbol is blue circle
+[ INFO] [1676497461.278524457, 3.592000000]: New symbol is blue circle
+[ INFO] [1676497461.283843335, 3.597000000]: New symbol is blue circle
+[ INFO] [1676497461.289672916, 3.603000000]: New symbol is blue circle
+[ INFO] [1676497461.295701855, 3.606000000]: New symbol is blue circle
+
+

@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<launch>
+    <!-- MAVROS posix SITL environment launch script -->
+    <!-- launches MAVROS, PX4 SITL, Gazebo environment, and spawns vehicle -->
+    <!-- vehicle pose -->
+    <!-- Initial USV location and attitude-->
+    <arg name="x" default="158" />
+    <arg name="y" default="108" />
+    <arg name="z" default="0.1" />
+    <arg name="P" default="0" />
+    <arg name="R" default="0" />
+    <arg name="Y" default="-2.76" />
+    <!-- vehicle model and world -->
+    <!-- <arg name="est" default="ekf2"/> -->
+    <arg name="vehicle" default="wamv"/>
+    
+    <!--<arg name="sdf" default="$(find mavlink_sitl_gazebo)/models/$(arg vehicle)/$(arg vehicle).sdf"/>-->
+
+    <!-- gazebo configs -->
+    <arg name="debug" default="false"/>
+    <env name="ROSCONSOLE_CONFIG_FILE" value="$(find vrx_models_worlds)/config/custom_rosconsole.conf"/>
+    <!-- Gazebo world to load -->
+    <arg name="world" default="$(find px4)/Tools/simulation/gazebo-classic/sitl_gazebo-classic/worlds/wamv.world" />
+    <!-- If true, run gazebo GUI -->
+    <arg name="gui" default="true" />
+    <!-- If true, run gazebo in verbose mode -->
+    <arg name="verbose" default="false"/>
+    <!-- If true, start in paused state -->
+    <arg name="paused"  default="false"/>
+        
+    <arg name="respawn_gazebo" default="false"/>
+    <!-- MAVROS configs -->
+    <arg name="fcu_url" default="udp://:14540@localhost:14557"/>
+    <arg name="respawn_mavros" default="false"/>
+    <!-- PX4 configs -->
+    <arg name="interactive" default="true"/>
+    <!-- PX4 SITL and Gazebo -->
+    <include file="$(find offboard_control)/launch/posix_sitl.launch">
+        <arg name="x" value="$(arg x)"/>
+        <arg name="y" value="$(arg y)"/>
+        <arg name="z" value="$(arg z)"/>
+        <arg name="R" value="$(arg R)"/>
+        <arg name="P" value="$(arg P)"/>
+        <arg name="Y" value="$(arg Y)"/>
+        <arg name="world" value="$(arg world)"/>
+        <arg name="vehicle" value="$(arg vehicle)"/>
+        <!--<arg name="sdf" value="$(arg sdf)"/>-->
+        <arg name="gui" value="$(arg gui)"/>
+        <arg name="interactive" value="$(arg interactive)"/>
+        <arg name="debug" value="$(arg debug)"/>
+        <arg name="verbose" value="$(arg verbose)"/>
+        <arg name="paused" value="$(arg paused)"/>
+        <arg name="respawn_gazebo" value="$(arg respawn_gazebo)"/>
+    </include>
+    <!-- MAVROS -->
+    <include file="$(find mavros)/launch/px4.launch">
+        <!-- GCS link is provided by SITL -->
+        <arg name="gcs_url" value=""/>
+        <arg name="fcu_url" value="$(arg fcu_url)"/>
+        <arg name="respawn_mavros" value="$(arg respawn_mavros)"/>
+    </include>
+</launch>
